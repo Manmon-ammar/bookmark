@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./images/bookmark.png" type="image/x-icon">
+    <title>Bookmark</title>
+    <!-- ? font awsome -->
+     <link rel="stylesheet" href="./css/all.min.css">
+    <!-- * fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Caption:wght@400;700&family=Pacifico&family=Righteous&display=swap" rel="stylesheet">
+    <!-- ! bootstrap -->
+     <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <!-- ^ css -->
+     <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div class="container my-5 py-5 d-flex flex-column align-items-center justify-content-center">
+        <h1 class="text-capitalize fw-semibold display-5 mb-5">bookmarker</h1>
+        <form class="py-5 w-100 d-flex flex-column">
+            <h2 class="text-center mb-3 fw-bold">
+                <i class="fa-solid fa-bookmark"></i>
+                Bookmark your favorite sites 
+                <i class="fa-solid fa-bookmark"></i>
+            </h2>
+            <label for="siteName" class="text-capitalize"><i class="fa-solid fa-bookmark"></i> site name</label>
+            <input type="text" id="siteName" class="form-control my-2" placeholder="Bookmark Name" oninput="validation(siteNameRegex , siteName)">
+            <p class="error d-none">site name should be 4 characters or more</p>
+            <label for="siteUrl" class="text-capitalize"><i class="fa-solid fa-link"></i> site URL</label>
+            <input type="text" id="siteUrl" class="form-control my-2" placeholder="Website URL" oninput="validation(siteUrlRegex , siteUrl)">
+            <p class="error d-none">Url is invalid (ex: https://example.com or www.example.net)</p>
+            <button class="btn text-white align-self-center submit mt-3 px-5" type="button" onclick="saveBookmark()">Submit</button>
+        </form>
+        <table class="w-75 mx-auto mt-5 bg-light">
+            <thead>
+                <tr class="border-bottom">
+                    <th class="text-center p-2">Index</th>
+                    <th class="text-center p-2">Website Name</th>
+                    <th class="text-center p-2">Visit</th>
+                    <th class="text-center p-2">Delete</th>
+                </tr>
+            </thead>
+            <tbody id="tableBody">
+                
+            </tbody>
+        </table>
+    </div>
+    
+    <!-- ! js bootstrap -->
+     <script src="./js/bootstrap.bundle.min.js"></script>
+    <!-- & js -->
+     <script src="./js/script.js"></script>
+</body>
+</html>
